@@ -1317,25 +1317,23 @@ myApp.onPageInit('splash-screen', function(page) {
 
 	new Vivus('logo', {
 		duration: 125,
-		onReady: function(obj) {
-			obj.el.classList.add('animation-begin');
-		}
+		
 	},
 	function(obj) {
-		obj.el.classList.add('animation-finish');
+		// obj.el.classList.add('animation-finish');
 
 		/* 3 seconds after logo animation is completed, open walkthrough screen. */
-		setTimeout(function(){
+		
 			mainView.router.load({
-				url: 'walkthrough.html'
+				url: 'home.html'
 			});
-		}, 3000);
+		
 	});
 
 	/* 1 second after page is loaded, show preloader. */
-	setTimeout(function() {
-		$$('.page[data-page=splash-screen] .splash-preloader').css('opacity', 1);
-	}, 1000);
+	// setTimeout(function() {
+	// 	$$('.page[data-page=splash-screen] .splash-preloader').css('opacity', 1);
+	// }, 1000);
 
 });
 
